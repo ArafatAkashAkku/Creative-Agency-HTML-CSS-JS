@@ -43,7 +43,7 @@ header .left {
     margin-left: 30px;
 }
 
-header .left h1 {
+header .left a h1 {
     font-size: 30px;
     color: darkorchid;
     cursor: pointer;
