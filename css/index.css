@@ -65,6 +65,25 @@ header .right nav ul li a {
 
 /* header end  */
 
+/* progress bar start  */
+
+.progress{
+    height: 5px;
+    width: 100%;
+    position: fixed;
+    top: 8vh;
+    z-index: 1000;
+}
+
+.highlight{
+    transition: width 0.5s linear;
+    width: 0%;
+    background-color: darkorchid;
+    height: 100%;
+}
+
+/* progress bar end  */
+
 /* home section start  */
 
 #home {
