@@ -1,0 +1,210 @@
+/* css reset start  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    text-transform: none;
+    user-select: none;
+}
+
+/* css reset start  */
+
+/* html start  */
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* html end  */
+
+/* header start  */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+header .fa-solid {
+    display: none;
+}
+
+header .left {
+    margin-left: 30px;
+}
+
+header .left h1 {
+    font-size: 30px;
+    color: darkorchid;
+}
+
+header .right nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-right: 70px;
+}
+
+header .right nav ul li a {
+    font-size: 21px;
+    color: white;
+    cursor: pointer;
+    padding: 3px 9px;
+    border-radius: 10px;
+}
+
+/* header end  */
+
+/* home section start  */
+
+#home {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#home .left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 25px;
+    padding-left: 60px;
+}
+
+#home .left h1 {
+    font-size: 40px;
+}
+
+#home .left p {
+    font-size: 20px;
+}
+
+#home .left a {
+    font-size: 18px;
+    background-color: darkorchid;
+    padding: 5px 25px;
+    border-radius: 16px;
+    color: white;
+}
+
+#home .right {
+    width: 50%;
+    background-image: url(../images/Home-Right-Picture.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#home .right .home-picture {
+    width: 60%;
+}
+
+#home .right .home-overlay {
+    width: 30%;
+    position: absolute;
+}
+
+/* home section end  */
+
+/* service section start  */
+
+#services {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-image: url(../images/Services-Left-picture-1.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: top left;
+}
+
+#services .upper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 15%;
+}
+
+#services .upper h1 {
+    font-size: 30px;
+    color: black;
+}
+
+#services .upper p {
+    font-size: 17px;
+    color: black;
+}
+
+#services .lower {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 10%;
+}
+
+#services .lower .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-image: url(../images/Services-Left-picture-2.png);
+    border-radius: 15px;
+    padding: 15px 0px;
+}
+
+#services .lower .feature h3 {
+    font-size: 20px;
+    color: darkorchid;
+}
+
+#services .lower .feature p {
+    font-size: 17px;
+    color: black;
+}
+
+#services .lower .feature a {
+    font-size: 17px;
+    color: white;
+    background-color: darkorchid;
+    padding: 5px 20px;
+    border-radius: 25px;
+}
+
+/* service section end  */
+
+/* custom scrollbar start */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    background-color: darkorchid;
+    border-radius: 4px;
+    border: 1px solid blue;
+}
+
+/* custom scrollbar end */

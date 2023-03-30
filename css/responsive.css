@@ -1,0 +1,14 @@
+@media screen and (max-width:1025px) {
+
+    header .fa-solid {
+        display: block;
+        font-size: 35px;
+        color: white;
+        margin-right: 25px;
+    }
+
+    header .fa-xmark {
+        font-size: 45px;
+        color: white;
+    }
+}
