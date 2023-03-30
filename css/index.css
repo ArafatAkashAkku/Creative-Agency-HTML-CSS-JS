@@ -46,6 +46,7 @@ header .left {
 header .left h1 {
     font-size: 30px;
     color: darkorchid;
+    cursor: pointer;
 }
 
 header .right nav ul {
@@ -61,6 +62,11 @@ header .right nav ul li a {
     cursor: pointer;
     padding: 3px 9px;
     border-radius: 10px;
+}
+
+header .right nav ul li a:hover {
+    color:darkorchid;
+    transition: color 0.3s;
 }
 
 /* header end  */
@@ -208,6 +214,78 @@ header .right nav ul li a {
 }
 
 /* service section end  */
+
+/* why us section start  */
+
+#why-us{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-image: url(../images/Why-Us-Left-picture-1.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: top right;
+    margin-top: 50px;
+}
+
+#why-us .upper {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 15%;
+}
+
+#why-us .upper h1 {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+#why-us .upper p {
+    font-size: 17px;
+    color: black;
+}
+
+#why-us .upper a {
+    font-size: 17px;
+    color: white;
+    background-color: darkorchid;
+    padding: 5px 20px;
+    border-radius: 25px;
+}
+
+#why-us .lower {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 10%;
+}
+
+#why-us .lower .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-image: url(../images/Why-Us-Left-picture-2.png);
+    background-position: center;
+    border-radius: 15px;
+    padding: 15px 0px;
+}
+
+#why-us .lower .feature h3 {
+    font-size: 20px;
+    color: darkorchid;
+}
+
+#why-us .lower .feature p {
+    font-size: 17px;
+    color: black;
+}
+
+/* why us section end  */
 
 /* custom scrollbar start */
 
