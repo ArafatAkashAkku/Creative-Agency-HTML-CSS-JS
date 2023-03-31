@@ -12,6 +12,8 @@
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
     <!-- font awesome cdn 6.3.0 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <!-- manifest link  -->
+    <link rel="manifest" href="manifest.json">
     <title>Creative Agency</title>
 </head>
 
@@ -147,6 +149,11 @@
     <footer></footer>
 
     <script src="js/index.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' });
+        }
+    </script>
 </body>
 
 </html>
