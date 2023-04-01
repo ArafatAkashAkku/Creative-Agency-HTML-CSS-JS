@@ -5,11 +5,11 @@ self.addEventListener('install', event => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME);
     cache.addAll([
-      '/',
-      '/images/',
-      '/js/index.js',
-      '/css/index.css',
-      '/css/responsive.css'
+      '/'
+      // '/images/',
+      // '/js/index.js',
+      // '/css/index.css',
+      // '/css/responsive.css'
     ]);
   })());
 });
