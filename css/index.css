@@ -89,6 +89,85 @@ header .right nav ul li a.active {
 
 /* progress bar end  */
 
+/* cookie set start  */
+
+.cookie {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0px;
+    background-color: darkorchid;
+    border: 1px solid darkorchid;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    box-shadow: 0px -3px 176px 157px black;
+    margin: 0 5px;
+    visibility: hidden;
+}
+
+.cookie.hide{
+    display: none;
+}
+
+.cookie .left {
+    width: 60%;
+    padding: 0 15px;
+}
+
+.cookie .left h2 {
+    padding-bottom: 5px;
+    color: white;
+    font-size: 25px;
+}
+
+.cookie .left p {
+    color: white;
+    font-size: 17px;
+}
+
+.cookie .left p span {
+    color: blue;
+    text-decoration: underline;
+    font-weight: 100;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.cookie .right {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 40%;
+    padding: 0 15px;
+}
+
+.cookie .right .preference {
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: darkorchid;
+}
+
+.cookie .right .reject {
+    padding: 5px 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: darkorchid;
+}
+
+.cookie .right .accept {
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: darkorchid;
+}
+
+/* cookie set end  */
+
 /* home section start  */
 
 #home {
@@ -355,12 +434,12 @@ header .right nav ul li a.active {
     align-items: center;
     justify-content: center;
     width: 100%;
-    
-    background-image: url(../images/Why-Us-Left-picture-1.png),url("../images/Services-Left-picture-1.png");
+
+    background-image: url(../images/Why-Us-Left-picture-1.png), url("../images/Services-Left-picture-1.png");
 
     background-repeat: no-repeat;
     background-size: 20%;
-    background-position: center right,center left;
+    background-position: center right, center left;
 
     padding: 5% 10%;
 }
@@ -383,10 +462,10 @@ header .right nav ul li a.active {
 }
 
 #contact-info form {
-width: 100%;
-display: flex;
-justify-content: center;
-height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 40px;
 }
 
 #contact-info form div {

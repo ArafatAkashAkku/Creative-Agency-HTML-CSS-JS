@@ -45,6 +45,40 @@
         border: none;
     }
 
+    .cookie {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cookie .left {
+        width: 100%;
+    }
+
+    .cookie .left h2 {
+        font-size: 20px;
+    }
+    
+    .cookie .left p {
+        font-size: 15px;
+    }
+
+    .cookie .right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cookie .right .preference {
+        font-size: 13px;
+    }
+    
+    .cookie .right .reject {
+        font-size: 13px;
+    }
+    
+    .cookie .right .accept {
+        font-size: 13px;
+    }
+
     #home .left {
         gap: 35px;
         padding-left: 30px;
@@ -165,6 +199,14 @@
 
     #home .right .home-picture {
         width: 80%;
+    }
+
+}
+
+@media screen and (max-width:520px) {
+
+    .cookie .right {
+        flex-direction: column;
     }
 
 }
