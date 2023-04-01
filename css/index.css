@@ -61,8 +61,11 @@ header .right nav ul li a {
     color: darkorchid;
     cursor: pointer;
     padding: 3px 9px;
-    border-radius: 10px;
     font-weight: bold;
+}
+
+header .right nav ul li a.active {
+    border-bottom: 2px solid darkorchid;
 }
 
 /* header end  */

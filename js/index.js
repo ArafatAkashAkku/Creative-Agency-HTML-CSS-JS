@@ -5,6 +5,7 @@ const container = document.querySelector("body");
 const highlight = document.getElementById("bar-highlight");
 
 window.onscroll = () => {
+    // scroll effect 
     if (scrollY > 80) {
         navigationBar.style.backgroundColor = "white";
     }
@@ -12,6 +13,7 @@ window.onscroll = () => {
         navigationBar.style.backgroundColor = "transparent";
     }
 
+    // scroll progress bar
     let cheight = container.offsetHeight - window.innerHeight;
     let cpos = container.getBoundingClientRect();
     let diff = cheight + cpos.top;

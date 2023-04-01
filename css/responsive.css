@@ -41,6 +41,8 @@
     header .right nav ul li a {
         background-color: white;
         padding: 15px 25px;
+        border-radius: 10px;
+        border: none;
     }
 
     #home .left {
