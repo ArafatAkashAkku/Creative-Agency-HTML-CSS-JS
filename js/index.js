@@ -62,7 +62,7 @@ const rejectBtn = document.querySelector(".cookie .right .reject");
 
 setTimeout(() => {
     cookieBox.style.visibility = "visible"
-}, 1000);
+}, 5000);
 
 rejectBtn.onclick = () => {
     cookieBox.style.visibility = "hidden";
