@@ -58,15 +58,11 @@ header .right nav ul {
 
 header .right nav ul li a {
     font-size: 21px;
-    color: white;
+    color: darkorchid;
     cursor: pointer;
     padding: 3px 9px;
     border-radius: 10px;
-}
-
-header .right nav ul li a:hover {
-    color: darkorchid;
-    transition: color 0.3s;
+    font-weight: bold;
 }
 
 /* header end  */
@@ -418,9 +414,8 @@ height: 40px;
     border-radius: 25px;
     border: 1px solid darkorchid;
     color: white;
+    cursor: pointer;
 }
-
-
 
 /* contact-info section end  */
 

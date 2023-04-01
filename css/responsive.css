@@ -1,14 +1,181 @@
-@media screen and (max-width:1025px) {
+@media screen and (max-width:950px) {
 
     header .fa-solid {
         display: block;
         font-size: 35px;
-        color: white;
+        color: darkorchid;
         margin-right: 25px;
     }
 
     header .fa-xmark {
         font-size: 45px;
-        color: white;
+        color: darkorchid;
     }
+
+    header .right {
+        background: darkorchid;
+        position: absolute;
+        top: 8vh;
+        width: 100%;
+        height: 92vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 100%;
+        transition: 0.5s;
+        z-index: 50;
+    }
+
+    header .right.active {
+        left: 0;
+        transition: 0.5s;
+    }
+
+    header .right nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        margin: 0;
+    }
+
+    header .right nav ul li a {
+        background-color: white;
+        padding: 15px 25px;
+    }
+
+    #home .left {
+        gap: 35px;
+        padding-left: 30px;
+    }
+
+    #home .right {
+        width: 100%;
+        position: absolute;
+        justify-content: flex-end;
+        z-index: -1;
+    }
+
+    #home .right .home-overlay {
+        width: 60%;
+    }
+
+    #services {
+        gap: 25px;
+        padding: 20px 0;
+        background-size: 50%;
+    }
+
+    #services .upper {
+        padding: 0 5%;
+    }
+
+    #services .lower {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #services .lower .feature {
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #why-us {
+        margin-top: 10px;
+        background-size: 50%;
+    }
+
+    #why-us .upper {
+        padding: 0 5%;
+    }
+
+    #why-us .lower {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    #why-us .lower .feature {
+        background-repeat: no-repeat;
+    }
+
+    #contact {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        background-size: 20%, 50%;
+    }
+
+    #contact .left {
+        width: 100%;
+    }
+
+    #contact .right {
+        width: 100%;
+    }
+
+    #contact-info {
+        background-size: 30%;
+    }
+
+    #contact-info p {
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+
+    #home .left h1 {
+        font-size: 30px;
+    }
+
+    #home .left p {
+        font-size: 17px;
+    }
+
+    #home .left a {
+        font-size: 15px;
+    }
+
+    #home .right .home-overlay {
+        width: 70%;
+    }
+
+    #home .right .home-picture {
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+
+    #home .right {
+        background-size: auto;
+    }
+
+    #home .left {
+        width: 100%;
+    }
+
+    #home .right .home-overlay {
+        width: 80%;
+    }
+
+    #home .right .home-picture {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:300px) {
+
+    #contact .left iframe {
+        width: 250px;
+        height: 250px;
+    }
+
+    #contact-info form div input[type="email"] {
+        padding: 5px 38px 6px 46px;
+    }
+
 }
