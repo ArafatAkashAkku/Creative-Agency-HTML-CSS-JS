@@ -106,7 +106,7 @@ header .right nav ul li a.active {
     visibility: hidden;
 }
 
-.cookie.hide{
+.cookie.hide {
     display: none;
 }
 
@@ -500,6 +500,128 @@ header .right nav ul li a.active {
 }
 
 /* contact-info section end  */
+
+/* footer start  */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    background-image: url("../images/Footer-Background.png");
+    background-size: cover;
+    padding-bottom: 5px;
+}
+
+footer .upper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 8% 10% 0%;
+}
+
+footer .upper .left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+footer .upper .left h1 a{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+footer .upper .left p {
+    font-size: 17px;
+    color: white;
+}
+
+footer .upper .left ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+footer .upper .left ul li:nth-child(1) a i {
+    font-size: 25px;
+    color: red;
+    cursor: pointer;
+}
+
+footer .upper .left ul li:nth-child(2) a i {
+    font-size: 25px;
+    color: blue;
+    cursor: pointer;
+}
+
+footer .upper .left ul li:nth-child(3) a i {
+    font-size: 25px;
+    color: skyblue;
+    cursor: pointer;
+}
+
+footer .upper .left ul li:nth-child(4) a i {
+    font-size: 25px;
+    color: blue;
+    cursor: pointer;
+}
+
+footer .upper .right{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+footer .upper .right ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer .upper .right ul li{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: white;
+}
+
+footer .upper .right ul li:nth-child(1) i {
+    color: black;
+    font-size: 20px;
+}
+
+footer .upper .right ul li:nth-child(2) i {
+    color: black;
+    font-size: 20px;
+}
+
+footer .upper .right ul li:nth-child(3) i {
+    color: black;
+    font-size: 20px;
+}
+
+footer .upper .right ul li:nth-child(4) i {
+    color: black;
+    font-size: 20px;
+}
+
+footer .lower p{
+    font-size: 17px;
+    color: darkorchid;
+}
+
+footer .lower p a{
+    color: darkorchid;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+
+/* footer end  */
+
 
 /* custom scrollbar start */
 
