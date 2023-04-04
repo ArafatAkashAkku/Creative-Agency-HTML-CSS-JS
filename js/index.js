@@ -35,7 +35,7 @@ window.onscroll = () => {
                 // Call function every ms
                 setTimeout(updateCount, 1);
             } else {
-                counter.innerText = target;
+                counter.innerHTML = target;
             }
         };
         if (projects.getBoundingClientRect().top + projects.getBoundingClientRect().height < window.innerHeight) {
@@ -140,7 +140,7 @@ const speed = 80; // The lower the slower //digit value depends on data target v
 //                 // Call function every ms
 //                 setTimeout(updateCount, 1);
 //             } else {
-//                 counter.innerText = target;
+//                 counter.innerHTML = target;
 //             }
 //         };
 //         if (projects.getBoundingClientRect().top + projects.getBoundingClientRect().height < window.innerHeight) {
