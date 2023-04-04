@@ -501,6 +501,32 @@ header .right nav ul li a.active {
 
 /* contact-info section end  */
 
+/* projects section start  */
+
+#projects {
+    background: darkorchid;
+    color: #fff;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#projects .counter {
+	font-size: 45px;
+	margin: 10px 0;
+}
+
+#projects .counter span{
+	color: white;
+}
+
+/* projects section end  */
+
 /* footer start  */
 
 footer {

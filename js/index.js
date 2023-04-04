@@ -5,7 +5,7 @@ const container = document.querySelector("body");
 const highlight = document.getElementById("bar-highlight");
 
 window.onscroll = () => {
-    // scroll effect 
+    // scroll effect navbar
     if (scrollY > 80) {
         navigationBar.style.backgroundColor = "white";
     }
@@ -20,6 +20,31 @@ window.onscroll = () => {
     let progress = diff / cheight * 100;
     let csswidth = Math.floor(100 - progress);
     highlight.style.width = csswidth + "%";
+
+    // animation counter scrolling
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerHTML;
+            // Lower inc to slow and higher to slow
+            const inc = Math.floor(target / speed);
+            // Check if target is reached
+            if (count < target) {
+                // Add inc to count and output in counter
+                counter.innerHTML = count + inc;
+                // Call function every ms
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        if (projects.getBoundingClientRect().top + projects.getBoundingClientRect().height < window.innerHeight) {
+            updateCount();
+        } else {
+            counter.innerHTML = "0";
+        }
+    });
+
 }
 
 // navigation bar on click effect 
@@ -39,7 +64,10 @@ phoneBar.onclick = () => {
 }
 
 // navigation bar links on click effect 
-const navLinks = document.querySelectorAll('header .right ul li a')
+
+const navLinks = document.querySelectorAll('header .right ul li a');
+// const phoneNav = document.querySelector('header .right');
+// const phoneBar = document.getElementById('phone-bar');
 
 navLinks.forEach((element) => {
     element.onclick = () => {
@@ -85,3 +113,40 @@ acceptBtn.onclick = () => {
 let check = document.cookie.indexOf("fname=Arafat");
 check != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
 
+// counter animation 
+
+const projects = document.getElementById("projects");
+const counters = document.querySelectorAll('.counter');
+const speed = 80; // The lower the slower //digit value depends on data target value //always choose the low data target value
+
+// console.log(scrollY) // same value but changes on scroll
+// console.log(window.scrollY) // same as console.log(scrollY)
+// console.log(window.innerHeight) // fixed value screen
+// console.log(projects.getBoundingClientRect().top) // for user perspective changing to lower value ex. scrolly = 0 top 100; scrolly 80 top 95
+// console.log(projects.getBoundingClientRect().height) // normal height of dedicated part
+// console.log(projects.offsetTop); // from window scrolly 0, if scrolly 100 but no change in offset value
+
+// window.onscroll = () => {
+//     counters.forEach(counter => {
+//         const updateCount = () => {
+//             const target = +counter.getAttribute('data-target');
+//             const count = +counter.innerHTML;
+//             // Lower inc to slow and higher to slow
+//             const inc = Math.floor(target / speed);
+//             // Check if target is reached
+//             if (count < target) {
+//                 // Add inc to count and output in counter
+//                 counter.innerHTML = count + inc;
+//                 // Call function every ms
+//                 setTimeout(updateCount, 1);
+//             } else {
+//                 counter.innerText = target;
+//             }
+//         };
+//         if (projects.getBoundingClientRect().top + projects.getBoundingClientRect().height < window.innerHeight) {
+//             updateCount();
+//         }else{
+//             counter.innerHTML="0";
+//         }
+//     });
+// }
