@@ -23,7 +23,7 @@
         justify-content: center;
         left: 100%;
         transition: 0.5s;
-        z-index: 50;
+        z-index: 50000;
     }
 
     header .right.active {
