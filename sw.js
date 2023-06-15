@@ -1,38 +1,26 @@
-const CACHE_NAME = `creative agency`;
+//Setting cache name & each update should have different cache name
+const cacheName = 'firstVersion';
 
-// Use the install event to pre-cache all initial resources.
-self.addEventListener('install', event => {
-  event.waitUntil((async () => {
-    const cache = await caches.open(CACHE_NAME);
-    cache.addAll([
-      '/',
-      '/images/',
-      '/js/index.js',
-      '/css/index.css',
-      '/css/responsive.css'
-    ]);
-  })());
-});
+// service-worker.js (register this as a service worker)
+self.addEventListener('install', event => event.waitUntil(onInstall(event)));
+self.addEventListener('activate', event => event.waitUntil(onActivate(event)));
+self.addEventListener('fetch', () => { });
 
-self.addEventListener('fetch', event => {
-  event.respondWith((async () => {
-    const cache = await caches.open(CACHE_NAME);
+// Installing the application from service worker 
+async function onInstall(event) {
+  // Telling the service worker to activate right away when an update is pickedup.
+  // In main JavaScript this will trigger 'controllerchange', which we can use to trigger an page reload.
+  event.waitUntil(
+    caches.open(cacheName)
+      .then(cache => cache.addAll([
+        '/',
+        '/images/',
+        '/js/index.js',
+        '/css/index.css',
+        '/css/responsive.css'
+      ]))
+  );
+  self.skipWaiting();
+}
 
-    // Get the resource from the cache.
-    const cachedResponse = await cache.match(event.request);
-    if (cachedResponse) {
-      return cachedResponse;
-    } else {
-        try {
-          // If the resource was not in the cache, try the network.
-          const fetchResponse = await fetch(event.request);
-
-          // Save the resource in the cache and return it.
-          cache.put(event.request, fetchResponse.clone());
-          return fetchResponse;
-        } catch (e) {
-          // The network failed.
-        }
-    }
-  })());
-});
+async function onActivate(event) { }
