@@ -45,6 +45,20 @@ window.onscroll = () => {
         }
     });
 
+    // active on scroll navbar 
+    sections.forEach((sec) => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach((links) => {
+                links.classList.remove('active');
+                document.querySelector('header .right ul li a[href*=' + id + ']').classList.add("active");
+            })
+        }
+    });
 }
 
 // navigation bar on click effect 
@@ -66,8 +80,7 @@ phoneBar.onclick = () => {
 // navigation bar links on click effect 
 
 const navLinks = document.querySelectorAll('header .right ul li a');
-// const phoneNav = document.querySelector('header .right');
-// const phoneBar = document.getElementById('phone-bar');
+const sections = document.querySelectorAll('section');
 
 navLinks.forEach((element) => {
     element.onclick = () => {
