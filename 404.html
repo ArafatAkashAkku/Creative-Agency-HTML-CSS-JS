@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>404 Not Found | Creative Agency</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        text-transform: none;
+        user-select: none;
+    }
+
+    body {
+        overflow: hidden;
+        background-color: azure;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        height: 100vh;
+        text-align: center;
+        padding: 0 4vw;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: bolder;
+    }
+
+    h3 {
+        font-size: 30px;
+        font-weight: bolder;
+    }
+
+    img {
+        width: 30%;
+    }
+
+    p {
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+    a {
+        cursor: pointer;
+        background-color: darkorchid;
+        color: white;
+        padding: 10px 20px;
+        border: 1px solid darkorchid;
+        border-radius: 8px;
+        font-size: 20px;
+    }
+
+    @media screen and (max-width:950px) {
+
+        img {
+            width: 70%;
+        }
+
+    }
+
+    @media screen and (max-width:550px) {
+
+        section {
+            gap: 30px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <section>
+        <h1>404</h1>
+        <h3>Look like you're lost</h3>
+        <img src="images/404-Error.gif" alt="404-Error">
+        <p>the page you are looking for not avaible!</p>
+        <a href="index.html">Go to Home</a>
+    </section>
+</body>
+
+</html>
